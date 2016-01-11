@@ -13,7 +13,9 @@ module.exports = {
       name: options.name,
 
       defaultConfig: {
-        message: 'Build assets'
+        message: function(context) {
+          return 'Build assets in ' + context.distDir; // set from ember-cli-deploy-build
+        }
       },
 
       didBuild: function(context) {
@@ -28,7 +30,7 @@ module.exports = {
               _this.log(e, { color: 'red' });
               reject(e);
             } else {
-              _this.log('Committed build with message' + message, { verbose: true });
+              _this.log('Committed build with message: ' + message, { verbose: true });
               resolve();
             }
           });
