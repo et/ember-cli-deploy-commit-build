@@ -1,6 +1,6 @@
-# Ember-cli-deploy-commit-build
+# ember-cli-deploy-commit-build
 
-This README outlines the details of collaborating on this Ember addon.
+This plugin commits build files.
 
 ## Installation
 
